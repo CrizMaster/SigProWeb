@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1366 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip0_379_1644">
+      <rect width="1366" height="768" fill="white"/>
+    </clipPath>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="682.873" y1="-8.828" x2="682.873" y2="771" id="gradient-0">
+      <stop offset="0" style="stop-color: rgb(31.373% 70.588% 26.667%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 43.091% 0%)"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#clip0_379_1644)" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)">
+    <rect width="1366" height="768" style="fill: rgb(233, 49, 22); stroke-miterlimit: 14.5;"/>
+    <path d="M 1365.747 494.246 L 996.44 722.004 L 718.521 663.314 L 471.234 771 L 0 771 L 440.102 463.555 L 330.642 253.568 L 533.495 -8.828" style="fill: rgb(233, 49, 22); stroke-miterlimit: 14.5; stroke: url('#gradient-0'); paint-order: fill; stroke-width: 4px;"/>
+    <path d="M 1427.304 420.367 L 939.903 669.994 L 709.61 633.914 L 409.836 757.443 L -39.678 793.119 L 562.529 460.574 L 582.687 264.49 L 931.855 -6.248" style="fill: rgb(233, 49, 22); stroke-miterlimit: 14.5; paint-order: fill; stroke-width: 4px; stroke: rgb(238, 139, 36); transform-origin: 843.035px 361.932px;"/>
+    <path d="M 1770.137 306.591 L 1477.481 492.812 L 1257.244 444.826 L 1061.282 532.872 L 687.854 532.872 L 1036.612 281.498 L 949.871 109.807 L 1110.621 -104.734" style="fill: rgb(233, 49, 22); stroke-miterlimit: 14.5; paint-order: fill; stroke-width: 4px; stroke: rgb(71, 161, 221);"/>
+  </g>
+</svg>

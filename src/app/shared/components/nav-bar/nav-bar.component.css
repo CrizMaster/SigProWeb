@@ -1,0 +1,56 @@
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+.toolbar-backColor{
+  background-color: rgb(255, 255, 255);
+  color: #e93116;
+}
+
+.btn-menu1 {
+  color: #b9935a;
+  background-color: #fff;
+  font-weight: 400;
+}
+.btn-menu1:hover {
+  color: #ffffff;
+  background-color: #e93116;
+}
+
+.btn-menu2 {
+  color: #b9935a;
+  background-color: #fff;
+  font-weight: 400;
+}
+.btn-menu2:hover {
+  color: #ffffff;
+  background-color: #b9935a;
+}
+.btn-notify{
+  color: #ffbf00;
+}
+.btn-notify:hover{
+  color: #ffffff;
+  background-color: #ffbf00;
+}
+.btn-contact{
+  color: #ff0000;
+}
+.btn-contact:hover{
+  color: #ffffff;
+  background-color: #ff0000;
+}
+.btn-setting{
+  color: #ff7b00;
+}
+.btn-setting:hover{
+  color: #ffffff;
+  background-color: #ff7b00;
+}
+.btn-signoff{
+  color: #666666;
+}
+.btn-signoff:hover{
+  color: #ffffff;
+  background-color: #666666;
+}
+

@@ -1,0 +1,179 @@
+.full-width {
+    width: 100%;
+ }
+ /* .circle-header-image {
+    background-image: url('../../../assets/image/Logo_MVCS.png');
+    background-size: cover;
+    height: 60px;
+    width: 300px;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+    object-fit: cover;
+  } */
+  /********************Inicio Login Joel **********************/
+  .mat-mdc-card {
+   border-radius: 20px;
+}
+
+  body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+   font-size: 1rem;
+   line-height: 1.4;
+   color: #3c3c3c;
+   background-color: #fafafa;
+   -webkit-font-smoothing: antialiased;
+   letter-spacing: 0.012em;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   overflow-y: scroll;
+ }
+
+ .form {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+
+   background: #e6e6e6;
+   text-align: left;
+   
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
+ }
+
+
+ /*******************************************/
+.conten-img-header{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+ }
+ .logo-MVCS{
+   background-image: url(../../../assets/image/logo-mvcs.svg); 
+   width: 50%;
+   height: 36px;
+   background-position: center;
+   background-size: cover;
+   margin-right: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+ /* .logo-urbano{
+   background-image: url(img/logo-urbano.png); 
+   width: 50%;
+   height: 43px;
+   background-position: center;
+   background-size: cover;
+   margin-right: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ } */
+ .logo-bambas{
+    background-image: url(../../../assets/image/logo_bambas.svg); 
+    width: 90%;
+    height: 70px;
+    background-size:contain;
+    background-position:center center;
+    background-repeat:no-repeat;   
+  }
+ 
+ .conten-img-footer{
+   width: 200px;
+   display: flex;
+   justify-content: center;
+   column-gap: 25px;
+ }
+ .navegador{ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   color: #fff;
+   text-align: center;
+ }
+ .btn {
+   display: block;
+   width: 100%;
+   font-family: inherit;
+   background: #E8B835;
+   color: #fff;
+   border: 0;
+   border-radius: 0.25rem;
+   padding: 0.75rem 1rem;
+   cursor: pointer;
+   font-weight: 400!important;
+   letter-spacing: inherit;
+   margin-bottom: 0.5rem;
+ }
+ .btn:hover, .btn:focus {
+   background: #c29927;
+   outline: none !important;
+ }
+
+ .form__content__heading {
+   margin: 0 0 0.5rem;
+   text-align: center;
+   font-weight:bold;
+ }
+
+ .footer-text {
+    color: #5f94c9!important;
+  }
+ .form__footer {
+   margin: 0 0 0.5rem;
+   color: #fff !important;
+   text-align: center;
+ }
+ .conten-img-footer{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   column-gap: 25px;
+ }
+ .navegador{ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   color: #fff;
+   text-align: center;
+ }
+ .firefox{
+   background-image: url(../../../assets/image/firefox_logo.png); 
+   width: 36px;
+   height: 36px;
+   background-position: center;
+   background-size: cover;
+   margin: 0 auto;
+ }
+ 
+ 
+ .chrome{
+   background-image: url(../../../assets/image/chrome_logo.svg);
+   width: 36px;
+   height: 36px;
+   background-position: center;
+   background-size: cover;
+   margin: 0 auto;
+ 
+ }
+ /****************************************/
+ .content-logo{
+   display:flex;
+  flex-flow: row;
+}
+ @media(max-width:768px) {
+   .content-logo{
+     flex-flow: column;
+     display: flex;
+    align-items: center;
+   }
+   .logo-MVCS{
+      width: 70%;
+  }
+  .logo-cofopri {
+   width: 50%;
+   }
+ }

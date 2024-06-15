@@ -1,0 +1,17 @@
+<div class="row">
+  @for (item of listStatistics; track $index) {
+    <div class="col-md-3">
+      <app-card-statistics [data]="item"></app-card-statistics>
+    </div>
+  }
+  @empty {
+    <div class="col-md-12">
+      <mat-card class="w-100" style="min-height: 138px;">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        <mat-card-header>    
+          <mat-card-title>Loading statistical cards...</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  }
+</div>

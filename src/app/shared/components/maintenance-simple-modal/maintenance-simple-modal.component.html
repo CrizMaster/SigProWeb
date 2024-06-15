@@ -1,0 +1,106 @@
+<form [formGroup]="form" (ngSubmit)="guardar()">  
+  <h2 mat-dialog-title class="m-2 position-relative"><b>{{data.id == '' ? 'Add' : 'Edit'}}&nbsp;{{data.title}}</b>
+    <button mat-icon-button mat-dialog-close class="location-btn-close" tabindex="-1" title="close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </h2>  
+  <div mat-dialog-content class="m-2">
+    <div class="row">
+      @if(data.objAbbreviation){
+        <div class="col-md-8 color-text position-relative">
+          <label for="descriptionFCI" class="form-label">Description</label>
+          <input type="text" #description matInput 
+                  formControlName="description" 
+                  autocomplete="off"                
+                  maxlength="50"
+                  class="form-control focus-ring focus-ring-light pe-78" 
+                  id="descriptionFCI" 
+                  placeholder="Write description">
+          <div class="location-text-length">{{description.value.length}}/50</div>        
+        </div>
+        <div class="col-md-4 color-text position-relative">
+          <label for="Abbreviation" class="form-label">Abbreviation</label>
+          <input type="text" #Abbreviation matInput 
+                  formControlName="abbreviation" 
+                  autocomplete="off"                
+                  maxlength="6"
+                  class="form-control focus-ring focus-ring-light pe-78" 
+                  id="Abbreviation" 
+                  placeholder="Abbreviation">
+          <div class="location-text-length">{{Abbreviation.value.length}}/6</div>        
+        </div>
+      }
+      @else{
+        <div class="col-md-12 color-text position-relative">
+          <label for="descriptionFCI" class="form-label">Description</label>
+          <input type="text" #description matInput 
+                  formControlName="description" 
+                  autocomplete="off"                
+                  maxlength="100"
+                  class="form-control focus-ring focus-ring-light pe-78" 
+                  id="descriptionFCI" 
+                  placeholder="Write description">
+          <div class="location-text-length">{{description.value.length}}/100</div>        
+        </div>
+      }
+    </div>  
+    @if(data.objConfidential){
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <mat-slide-toggle formControlName="confidential">Confidential</mat-slide-toggle>
+        </div>      
+      </div>
+    }
+    @if(data.objNote){
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <div class="col-md-12 color-text">
+            <label for="note" class="form-label">Note</label>
+            <textarea type="text" matInput
+                    autocomplete="off"
+                    formControlName="note"
+                    class="form-control focus-ring focus-ring-light pe-78" 
+                    id="note"></textarea>
+          </div>
+        </div>
+      </div>
+    }
+    @if(data.objSize){
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="col-md-12 color-text">
+            <label for="sizeFrom" class="form-label">Size From</label>
+            <input type="text" matInput
+                    autocomplete="off"
+                    formControlName="sizefrom"
+                    class="form-control focus-ring focus-ring-light pe-78" 
+                    id="sizeFrom">      
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-12 color-text">
+            <label for="sizeUntil" class="form-label">Size Until</label>
+            <input type="text" matInput
+                    autocomplete="off"
+                    formControlName="sizeuntil"
+                    class="form-control focus-ring focus-ring-light pe-78" 
+                    id="sizeUntil">      
+          </div>      
+        </div>
+    </div>
+    }
+  </div>
+  <div mat-dialog-actions class="ms-4 mb-4">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-danger btn-sm" [disabled]="form.invalid || loading">&nbsp;&nbsp;{{data.id == '' ? 'Add' : 'Edit'}}&nbsp;{{data.title}}&nbsp;</button>
+      </div>
+    </div>  
+  </div>
+  @if(loading){
+    <div class="mx-3 mb-1" >
+      <span class="color-text" style="font-size: 1rem;">Saving...</span>
+    </div>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  }  
+</form>

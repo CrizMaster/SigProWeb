@@ -1,0 +1,97 @@
+<div class="form d-flex justify-content-center
+align-items-center vh-100 ">
+    <form (submit)="login()"  name="loginForm" [formGroup]="form">
+        <div class="p-4 rounded-4"
+            style="width: auto;">
+            
+            <mat-card class="mx-3 mt-2" style="width: 380px;">
+                <mat-card-header class="content-logo mb-3">
+                        <!-- <div class="logo-MVCS"></div> -->
+                        <div class="logo-bambas"></div>
+                        <a href="https://www.eocomp.com/" target="_blank" title="Desarrollado por EOCOMP">
+                            <div class="logo-eocomp"></div>
+                        </a>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-header>
+                    <div class="form__content__header ms-2">
+                        <h1 class="form__content__heading">Welcome<span>&nbsp;SIGPro+</span></h1>
+                        <!-- <mat-card-title class="text-center mx-2 display-6">SIGPRO WEB</mat-card-title> -->
+                    </div>
+                    <!-- <mat-card-title class="text-center fs-6 mx-2 display-6">SISTEMA DE INFORMACIÓN CATASTRAL URBANO</mat-card-title> -->
+                    <!-- <mat-card-subtitle class="text-start text-secondary m-2">Introduzca sus datos a continuación:</mat-card-subtitle> -->
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="user-input p-2">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input formControlName="usuario" matInput required />
+                            @if(form.get('usuario')?.invalid){
+                                <mat-error>
+                                    Username is required
+                                </mat-error>
+                            }                            
+                        </mat-form-field>
+                    </div>
+                    <div class="user-input p-2">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" 
+                            (keydown.enter)="login(); $event.preventDefault()"/>
+                            <button mat-icon-button matSuffix (click)="hide = !hide; $event.preventDefault()" tabindex="-1"
+                                [attr.aria-label]="'Hide Password'" [attr.aira-pressed]="hide"
+                                (keydown.enter)="$event.preventDefault()">
+                                <mat-icon>{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            @if(form.get('password')?.invalid){
+                                <mat-error>
+                                    Password is required
+                                </mat-error>
+                            }
+                        </mat-form-field>
+                    </div>
+                    @if(!offline){
+                        <button class="btn btn-sm btn-danger bg-cofopri w-100 mt-1 fw-semibold
+                        shadow-sm" type="submit">LOGIN
+                        </button>
+                    }
+                </mat-card-content>
+            </mat-card>
+            @if(loginError || viewProgress){
+                <mat-card class="mx-3 mt-2">
+                    <mat-card-content>
+                        @if(viewProgress){
+                            <mat-card-footer class="m-1">{{msgStatus}}
+                                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                            </mat-card-footer>
+                        }
+                        @else{
+                            <div class="user-input p-2" style="text-align:left;">
+                                <div class="text-danger">{{ loginError }}</div>
+                            </div> 
+                        }                    
+                    </mat-card-content>
+                </mat-card>
+            }
+            <div class="form__footer" style="color: rgb(0, 0, 0) !important;">
+                Recommended browsers
+            </div>
+            <div class="conten-img-footer">
+                <div class="navegador">
+                    <div class="firefox">
+                    </div>
+                    <div class="nav-texto" style="color: black !important;">
+                        Firefox
+                    </div>
+                </div>
+                <div class="navegador">
+                    <div class="chrome">
+                    </div> 
+                    <div class="nav-texto" style="color: black !important;">
+                        Chrome
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

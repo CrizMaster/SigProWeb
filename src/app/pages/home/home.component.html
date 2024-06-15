@@ -1,0 +1,121 @@
+
+    <p>
+        <mat-toolbar class="toolbar-backColor">
+          <div style="width: 150px;">
+            <img SRC="./../../../assets/image/logo_bambas.svg" style="width: auto; height: 40px;">
+          </div>          
+          <button mat-icon-button class="mt-2"
+                  (click)="drawer.toggle()">
+              <mat-icon>menu</mat-icon>
+          </button>
+          <span style="margin-left: 26px; color: #5a472b; font-size: 1.5rem; " class="mt-2">&nbsp; {{title}}</span>
+          <span class="toolbar-spacer"></span>
+          <button mat-icon-button class="btn-notify"
+                  matTooltip="Notifications"
+                  matTooltipShowDelay ="500"
+                  matTooltipPosition="below">
+                  <mat-icon>notifications</mat-icon>
+          </button>
+          <button mat-icon-button class="btn-contact"
+            matTooltip="Contact us"
+            matTooltipShowDelay ="500"
+            matTooltipPosition="below">
+            <mat-icon>contact_phone</mat-icon>
+          </button>
+          <button mat-icon-button class="btn-setting"
+            matTooltip="Settings"
+            matTooltipShowDelay ="500"
+            matTooltipPosition="below">
+            <mat-icon>settings</mat-icon>
+          </button>
+          <button mat-icon-button class="btn-signoff"
+                  matTooltip="Sign off"
+                  matTooltipShowDelay ="500"
+                  matTooltipPosition="below">
+                  <mat-icon>exit_to_app</mat-icon>
+          </button>
+        </mat-toolbar>
+    </p>
+    <mat-drawer-container [hasBackdrop]="hasBackdrop">
+        <mat-drawer #drawer mode="over" position="start" fixedInViewport="true"
+        style="width: 15rem;overflow-x: hidden; display: block; background: rgb(241, 241, 241);">
+          <!-- <app-user></app-user>
+          <app-menu [Drawer] = "drawer"></app-menu> -->
+          <div class="row">
+            <div class="col-md-12 text-center my-2" style="font-size: 1.2rem; color: #b9935a;font-weight: bold; font-family: sans-serif; ">SIGPro Web</div>
+          </div>
+          <mat-nav-list class="mb-1">
+            <mat-list-item class="btn-menu1" (click)="ir(1, drawer)">
+              <div class="d-flex justify-content-between pt-1 btn-menu1">
+                <div class="p-2"><span>Dashboard</span></div>
+                <div class="p-2"><mat-icon>dashboard</mat-icon></div>
+              </div>
+            </mat-list-item>
+            <mat-list-item class="btn-menu1" (click)="ir(2, drawer)">
+              <div class="d-flex justify-content-between pt-1 btn-menu1">
+                <div class="p-2"><span>Portfolio</span></div>
+                <div class="p-2"><mat-icon>home</mat-icon></div>
+              </div>
+            </mat-list-item>
+            <mat-list-item class="btn-menu1" (click)="ir(3, drawer)">
+              <div class="d-flex justify-content-between pt-1 btn-menu1">
+                <div class="p-2"><span>Projects</span></div>
+                <div class="p-2"><mat-icon>settings</mat-icon></div>
+              </div>
+            </mat-list-item>   
+            <mat-list-item class="btn-menu1"  (click)="ir(4, drawer)">
+              <div class="d-flex justify-content-between pt-1 btn-menu1">
+                <div class="p-2"><span>Areas</span></div>
+                <div class="p-2"><mat-icon>analytics</mat-icon></div>
+              </div>
+            </mat-list-item>
+            <mat-list-item class="btn-menu1" (click)="ir(5, drawer)">
+              <div class="d-flex justify-content-between pt-1 btn-menu1">
+                <div class="p-2"><span>Maintenance</span></div>
+                <div class="p-2"><mat-icon>settings_applications</mat-icon></div>
+              </div>
+            </mat-list-item>
+          </mat-nav-list>          
+          <mat-nav-list>
+            <mat-list-item class="btn-menu2">
+              <div class="d-flex justify-content-between pt-1 btn-menu2">
+                <div class="p-2"><span>Reports</span></div>
+                <div class="p-2"><mat-icon>dashboard</mat-icon></div>
+              </div>
+            </mat-list-item>
+            <mat-list-item class="btn-menu2">
+              <div class="d-flex justify-content-between pt-1 btn-menu2">
+                <div class="p-2"><span>Files</span></div>
+                <div class="p-2"><mat-icon>home</mat-icon></div>
+              </div>
+            </mat-list-item> 
+            <mat-list-item class="btn-menu2">
+              <div class="d-flex justify-content-between pt-1 btn-menu2">
+                <div class="p-2"><span>WorkFlow</span></div>
+                <div class="p-2"><mat-icon>settings</mat-icon></div>
+              </div>
+            </mat-list-item>
+          </mat-nav-list>
+          <div class="d-flex justify-content-center" style="margin-top: 80px;">
+            
+            <div class="d-flex flex-column my-4">              
+              <div class="text-center">
+                <a href="https://www.eocomp.com/" target="_blank" matTooltip="Desarrollado por EOCOMP">
+                  <div class="menu-eocomp"></div>
+                </a>                              
+              </div>
+              <div class="text-center" style="color: #73acfe; font-weight: bold;">eocomp</div>
+            </div>
+          </div>          
+        </mat-drawer>
+        <mat-drawer-content style="padding: 0 0 0 0;">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <router-outlet></router-outlet>
+              </div>
+            </div>      
+          </div>      
+        </mat-drawer-content>
+      </mat-drawer-container>    
+

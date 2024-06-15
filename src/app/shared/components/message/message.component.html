@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12 mx-2 mt-2" style="color: #1b415a;">
+    <div class="row">
+      <div class="col-md-2">
+        <button mat-mini-fab
+          [class.bt-success]="data.success"
+          [class.bt-error]="!data.success">
+          <mat-icon>{{ data.success ? 'task_alt' : 'clear' }}</mat-icon>
+        </button>
+      </div>
+      <div class="col-md-10 mt-2">        
+        {{data.message}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2><b>{{data.data}}</b></h2>
+      </div>
+    </div>
+  </div>
+</div>

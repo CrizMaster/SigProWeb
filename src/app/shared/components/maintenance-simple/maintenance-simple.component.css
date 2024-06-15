@@ -1,0 +1,30 @@
+.demo-table {
+    width: 100%;
+  }
+  
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color: #c0c0c0;
+    background: rgb(240,240,240);
+    background: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 50%, rgba(250,250,250,1) 100%);
+  }
+
+  .location-text-length{
+    position: absolute; 
+    top: 32px; 
+    right: 20px; 
+    color: #31566d;  
+  }
+  .pe-78{
+    padding-right: 78px;
+    color: #31566d; 
+  }
+  .form-label {
+    margin-bottom: 0 !important;
+    margin-left: 2px;
+   }

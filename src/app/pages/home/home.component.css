@@ -1,0 +1,98 @@
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+.toolbar-backColor{
+  background-color: rgb(255, 255, 255);
+  color: #e93116;
+}
+
+
+.drawer-container {
+  margin-top: -12px;
+  width: 100%;
+  height: 100%;
+}
+
+mat-drawer {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}  
+
+mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+mat-drawer-content-notscrollx{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.btn-menu1 {
+  color: #b9935a;
+  background-color: #fff;
+  font-weight: 400;
+}
+.btn-menu1:hover {
+  color: #ffffff;
+  background-color: #e93116;
+}
+
+.btn-menu2 {
+  color: #b9935a;
+  background-color: #fff;
+  font-weight: 400;
+}
+.btn-menu2:hover {
+  color: #ffffff;
+  background-color: #b9935a;
+}
+.btn-notify{
+  color: #ffbf00;
+}
+.btn-notify:hover{
+  color: #ffffff;
+  background-color: #ffbf00;
+}
+.btn-contact{
+  color: #ff0000;
+}
+.btn-contact:hover{
+  color: #ffffff;
+  background-color: #ff0000;
+}
+.btn-setting{
+  color: #ff7b00;
+}
+.btn-setting:hover{
+  color: #ffffff;
+  background-color: #ff7b00;
+}
+.btn-signoff{
+  color: #666666;
+}
+.btn-signoff:hover{
+  color: #ffffff;
+  background-color: #666666;
+}
+.menu-eocomp{
+  background-image: url(../../../assets/image/eologo_small.png); 
+  width: 50px;
+  height: 22px;
+  background-size:cover;
+  background-position:left;
+  background-repeat:no-repeat;   
+}
+
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

@@ -1,0 +1,26 @@
+<mat-card class="w-100 mb-2" style="min-height: 138px;">
+    @if(data){
+      <mat-card-header>
+        <mat-icon mat-card-avatar class="header-image-size"
+        [class.image-tasks]="data.image == 'tasks'"
+        [class.image-risks]="data.image == 'risks'"
+        [class.image-lessons]="data.image == 'lessons'"
+        [class.image-docs]="data.image == 'docs'"></mat-icon>
+        <mat-card-title class="header-value">{{ data.valueStatistic }}</mat-card-title>
+        <mat-card-subtitle>{{ data.nameStatistics }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="mb-3 ms-2">
+        <div class="row mb-2">
+          <div class="col-md-12">
+            <span class="span_red">{{ data.valueArrow1 }}
+              <mat-icon class="content-arrow arrow_red" aria-hidden="false" aria-label="arrow" fontIcon="forward"></mat-icon>
+            </span>
+            <span class="span_orange">{{ data.valueArrow2 }}
+              <mat-icon class="content-arrow arrow_orange" aria-hidden="false" aria-label="arrow" fontIcon="forward"></mat-icon>
+            </span>
+          </div>
+        </div>        
+      </mat-card-content>
+    }
+</mat-card>

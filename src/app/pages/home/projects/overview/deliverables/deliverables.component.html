@@ -1,0 +1,37 @@
+<mat-card class="w-100" style="min-height: 138px;">
+  @if(listDeliverables.length > 0){
+    <mat-card-header>    
+      <mat-card-title>Deliverables Status</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mt-2">
+      <table class="table table-hover">
+        <tbody>
+          @for (item of listDeliverables; track $index) {
+            <tr>
+              <td class="p-1" style="width: 30px;">
+                @if(item.codeStatus == 1){
+                  <mat-icon style="color: green;">check_circle</mat-icon>
+                }
+                @else if(item.codeStatus == 2){
+                  <mat-icon style="color: orange;">error</mat-icon>
+                }
+                @else if(item.codeStatus == 3){
+                  <mat-icon style="color: red;">cancel</mat-icon>
+                }
+              </td>
+              <td>
+                {{item.nameDeliverable}}
+              </td>
+            </tr>
+          }
+        </tbody>        
+      </table>
+    </mat-card-content>
+  }
+  @else {
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <mat-card-header>    
+      <mat-card-title>Loading deliverables status...</mat-card-title>
+    </mat-card-header>
+  }
+</mat-card>

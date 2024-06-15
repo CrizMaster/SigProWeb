@@ -1,0 +1,44 @@
+.header-image-size {
+    width: 80px;
+    height: 60px;
+}
+.image-risks {
+    background-image: url('../../../../assets/image/risks.png');
+    background-size: cover;
+}
+.image-lessons {
+    background-image: url('../../../../assets/image/lessons.png');
+    background-size: cover;
+}
+.image-tasks {
+    background-image: url('../../../../assets/image/tasks.png');
+    background-size: cover;
+}
+.image-docs {
+    background-image: url('../../../../assets/image/docs.png');
+    background-size: cover;
+}
+.header-value {
+    font-size: 30px;
+}
+.content-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.mat-mdc-card-avatar{
+    margin-bottom: 0px;
+}
+.span_red{
+    position: relative; margin-left: 90px; font-weight: bold; 
+}
+.arrow_red{
+    color: red; position: absolute; top: 5px; right:-20px;    
+}
+.span_orange{
+    position: relative; margin-left: 40px; font-weight: bold; 
+}
+.arrow_orange{
+    color: orange; position: absolute; top: 5px; right:-25px;
+}

@@ -1,0 +1,26 @@
+<div class="row m-4" style="min-height: 600px;">
+  <div class="col-md-12">
+    <mat-card class="w-100 p-2">
+      <mat-card-content style="background-color: #fafafa; border: 1px solid #f1f1f1;">
+        <mat-tab-group>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon >groups</mat-icon>&nbsp; RRHH
+            </ng-template>
+            <ng-template matTabContent>
+              <app-maintenance-rrhh></app-maintenance-rrhh>
+            </ng-template>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon >article</mat-icon>&nbsp; Project
+            </ng-template>
+            <ng-template matTabContent>             
+              <app-maintenance-project></app-maintenance-project>  
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>   
+    </mat-card> 
+  </div>
+</div>

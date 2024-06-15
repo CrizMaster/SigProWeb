@@ -1,0 +1,197 @@
+<mat-card class="w-100">
+  @if(loading){
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <mat-card-header>    
+      <mat-card-title>Loading portfolio...</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mx-4" style="min-height: 200px;">
+    </mat-card-content>       
+  }   
+  @else {
+    <mat-card-header>    
+      <mat-card-title>Portfolio</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mx-4" style="min-height: 400px;">
+      <div class="table-responsive">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+          <ng-container matColumnDef="NameArea">
+            <th mat-header-cell *matHeaderCellDef class="text-center">Area</th>
+            <td mat-cell *matCellDef="let element" colspan="12" class="text-left" style="border-top: 3px solid #dadada;"> 
+              <b>{{element.area}}</b>
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Area">
+            <th mat-header-cell *matHeaderCellDef class="text-center">Area</th>
+            <td mat-cell *matCellDef="let element" class="text-left">{{element.area}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Project">
+            <th mat-header-cell *matHeaderCellDef class="text-center">Project</th>
+            <td mat-cell *matCellDef="let element" class="text-left">{{element.project}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="KPI1">
+            <th mat-header-cell *matHeaderCellDef class="text-center">KPI 1</th>
+            <td mat-cell *matCellDef="let element" class="text-center align-center">
+              @if(element.kpi1 == 1){
+                <mat-icon aria-hidden="false" aria-label="check" style="color: green;">check_circle</mat-icon>
+              }
+              @else if(element.kpi1 == 2){
+                <mat-icon aria-hidden="false" aria-label="check" fontIcon="error" style="color: orange;"></mat-icon>
+              }
+              @else if(element.kpi1 == 3){
+                <mat-icon aria-hidden="false" aria-label="check" fontIcon="cancel" style="color: red;"></mat-icon>
+              }
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="KPI2">
+            <th mat-header-cell *matHeaderCellDef class="text-center">KPI 2</th>
+            <td mat-cell *matCellDef="let element" class="text-center align-center">
+              @if(element.kpi2 == 1){
+                <mat-icon aria-hidden="false" aria-label="check" style="color: green;">check_circle</mat-icon>
+              }
+              @else if(element.kpi2 == 2){
+                <mat-icon aria-hidden="false" aria-label="check" fontIcon="error" style="color: orange;"></mat-icon>
+              }
+              @else if(element.kpi2 == 3){
+                <mat-icon aria-hidden="false" aria-label="check" fontIcon="cancel" style="color: red;"></mat-icon>
+              }
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="KPI3">
+            <th mat-header-cell *matHeaderCellDef class="text-center">KPI 3</th>
+            <td mat-cell *matCellDef="let element" class="text-center align-center">
+              @if(element.kpi3 == 1){
+                <mat-icon aria-hidden="false" aria-label="check" style="color: green;">check_circle</mat-icon>
+              }
+              @else if(element.kpi3 == 2){
+                <mat-icon aria-hidden="false" aria-label="check" fontIcon="error" style="color: orange;"></mat-icon>
+              }
+              @else if(element.kpi3 == 3){
+                <mat-icon aria-hidden="false" aria-label="check" fontIcon="cancel" style="color: red;"></mat-icon>
+              }
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Stages1">
+            <th mat-header-cell *matHeaderCellDef class="text-center" [attr.colspan]="6" style="min-width: 540px;">STAGES</th>
+            <td mat-cell *matCellDef="let element" class="text-center" style="width: 90px;">
+              <div class="py-1" 
+              [class.stages1]="element.codeStages1 == 1"
+              [class.stages2]="element.codeStages1 == 2"
+              [class.stages3]="element.codeStages1 == 3"
+              [class.stages4]="element.codeStages1 == 4"
+              [class.stages5]="element.codeStages1 == 5"
+              [class.stages6]="element.codeStages1 == 6"
+              [class.stages7]="element.codeStages1 == 7"
+              [class.stages8]="element.codeStages1 == 8">
+                {{element.stages1}} 
+              </div>
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Stages2">
+            <th mat-header-cell *matHeaderCellDef class="text-center" style="display: none;"></th>
+            <td mat-cell *matCellDef="let element" class="text-center" style="width: 90px;">
+              <div class="py-1" 
+              [class.stages1]="element.codeStages2 == 1"
+              [class.stages2]="element.codeStages2 == 2"
+              [class.stages3]="element.codeStages2 == 3"
+              [class.stages4]="element.codeStages2 == 4"
+              [class.stages5]="element.codeStages2 == 5"
+              [class.stages6]="element.codeStages2 == 6"
+              [class.stages7]="element.codeStages2 == 7"
+              [class.stages8]="element.codeStages2 == 8">
+                {{element.stages2}} 
+              </div>
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Stages3">
+            <th mat-header-cell *matHeaderCellDef class="text-center" style="display: none;"></th>
+            <td mat-cell *matCellDef="let element" class="text-center" style="width: 90px;">
+              <div class="py-1" 
+              [class.stages1]="element.codeStages3 == 1"
+              [class.stages2]="element.codeStages3 == 2"
+              [class.stages3]="element.codeStages3 == 3"
+              [class.stages4]="element.codeStages3 == 4"
+              [class.stages5]="element.codeStages3 == 5"
+              [class.stages6]="element.codeStages3 == 6"
+              [class.stages7]="element.codeStages3 == 7"
+              [class.stages8]="element.codeStages3 == 8">
+                {{element.stages3}} 
+              </div>         
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Stages4">
+            <th mat-header-cell *matHeaderCellDef class="text-center" style="display: none;"></th>
+            <td mat-cell *matCellDef="let element" class="text-center"  style="width: 90px;">
+              <div class="py-1" 
+              [class.stages1]="element.codeStages4 == 1"
+              [class.stages2]="element.codeStages4 == 2"
+              [class.stages3]="element.codeStages4 == 3"
+              [class.stages4]="element.codeStages4 == 4"
+              [class.stages5]="element.codeStages4 == 5"
+              [class.stages6]="element.codeStages4 == 6"
+              [class.stages7]="element.codeStages4 == 7"
+              [class.stages8]="element.codeStages4 == 8">
+                {{element.stages4}} 
+              </div>         
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Stages5">
+            <th mat-header-cell *matHeaderCellDef class="text-center" style="display: none;"></th>
+            <td mat-cell *matCellDef="let element" class="text-center"  style="width: 90px;">
+              <div class="py-1" 
+              [class.stages1]="element.codeStages5 == 1"
+              [class.stages2]="element.codeStages5 == 2"
+              [class.stages3]="element.codeStages5 == 3"
+              [class.stages4]="element.codeStages5 == 4"
+              [class.stages5]="element.codeStages5 == 5"
+              [class.stages6]="element.codeStages5 == 6"
+              [class.stages7]="element.codeStages5 == 7"
+              [class.stages8]="element.codeStages5 == 8">
+                {{element.stages5}} 
+              </div>          
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Stages6">
+            <th mat-header-cell *matHeaderCellDef class="text-center" style="display: none;"></th>
+            <td mat-cell *matCellDef="let element" class="text-center"  style="width: 90px;">
+              <div class="py-1" 
+              [class.stages1]="element.codeStages6 == 1"
+              [class.stages2]="element.codeStages6 == 2"
+              [class.stages3]="element.codeStages6 == 3"
+              [class.stages4]="element.codeStages6 == 4"
+              [class.stages5]="element.codeStages6 == 5"
+              [class.stages6]="element.codeStages6 == 6"
+              [class.stages7]="element.codeStages6 == 7"
+              [class.stages8]="element.codeStages6 == 8">
+                {{element.stages6}}
+              </div>          
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="['Area', 'Project', 'KPI1', 'KPI2', 'KPI3', 'Stages1', 'Stages2', 'Stages3', 'Stages4', 'Stages5', 'Stages6']"></tr>                
+          <tr mat-row *matRowDef="let row; columns: ['Area', 'Project', 'KPI1', 'KPI2', 'KPI3', 'Stages1', 'Stages2', 'Stages3', 'Stages4', 'Stages5', 'Stages6'];"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['NameArea']; when: isAreaRow" class="darken"></tr>
+  
+        </table>
+        @if(dataSource.filteredData.length == 0)
+        {
+          <div class="text-danger m-2 fst-italic">No se encontraron registros.</div>
+        }
+      </div>
+      <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        (page)="pageEvent = $event; pageChanged($event)">
+      </mat-paginator>     -->
+    </mat-card-content>    
+  }
+</mat-card> 

@@ -1,0 +1,18 @@
+.location-btn-close{
+  position: absolute; 
+  right: 0;  
+}
+.location-text-length{
+  position: absolute; 
+  top: 32px; 
+  right: 20px; 
+  color: #31566d;  
+}
+.pe-78{
+  padding-right: 78px;
+  color: #31566d; 
+}
+.form-label {
+  margin-bottom: 0 !important;
+  margin-left: 2px;
+ }

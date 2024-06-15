@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; }
+
+.mdc-linear-progress__bar-inner {  
+    border-color: rgb(235, 30, 35) !important;
+    }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.status-green {
+    background-color: #26a851 !important;
+    border-radius: 20px;
+    color: #fff!important;
+    font-size: 13px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 9px auto!important;
+    align-content: center;
+    width: 110px;
+    font-weight: 500;
+}
+.status-red {
+    background-color: #ff0303 !important;
+    border-radius: 20px;
+    color: #fff!important;
+    font-size: 13px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 9px auto!important;
+    align-content: center;
+    width: 110px;
+    font-weight: 500;
+}
+.status-yellow {
+    background-color: #e7b500 !important;
+    border-radius: 20px;
+    color: #fff!important;
+    font-size: 13px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 9px auto!important;
+    align-content: center;
+    width: 110px;
+    font-weight: 500;
+}
+
+.hand-cursor{
+    cursor: pointer;
+}
+.mat-mdc-table .mdc-data-table__header-row {
+    height: 35px;
+  }
+
+.mat-mdc-table .mdc-data-table__row{
+    height: 35px;
+  }
+/* .text-red{
+    color: #b9935a !important;
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline
+{
+    border: 2px solid #b9935a;
+    border-color: #b9935a !important;
+} */
+/* .text-red{
+    color: rgb(223, 19, 19) !important;
+} */
+
+.mdc-tab__content .mdc-tab__text-label{
+    color: rgb(179, 179, 179) !important;
+}
+/* .mdc-tab__content .mdc-tab__text-label:hover{
+    color: rgb(255, 0, 0) !important;
+} */
+
+
+.mdc-tab--active .mdc-tab__content .mdc-tab__text-label{
+    color: rgb(255, 0, 0) !important;
+}
+
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline
+{
+    border: 1px solid red;
+    border-color: #ff0000 !important;
+}
+
+.color-text{
+    color: #1b415a;
+}
+.color-red{
+    color: #ff0000;
+}
+/* .mat-mdc-snack-bar-container .mdc-snackbar__surface{
+    background-color: white !important;
+    color: #1b415a;
+} */
+:root {
+    --bg-color-message: #ffffff;
+}
+.mat-mdc-snack-bar-container .mdc-snackbar__surface{
+    background-color: var(--bg-color-message) !important;
+    color: #1b415a;
+}
+
+::ng-deep .mat-slide-toggle.mat-disabled {
+    opacity: 1 !important;
+  }
